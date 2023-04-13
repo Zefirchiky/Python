@@ -46,4 +46,3 @@ with Listener(on_press=on_press) as listener:
         keyboard.press(Key.enter)
         # sleep(.1)
         keyboard.release(Key.enter)
-        i *= 2
