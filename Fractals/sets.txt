@@ -1,0 +1,24 @@
+rule_1 if chr == chr_1 else 
+                    rule_2 if chr == chr_2 else chr for chr in axiom :
+
+Sierpinski Tryangle
+gens = 8
+axiom = "F"
+chr_1, rule_1 = "F", "F-G+F+G-F"
+chr_2, rule_2 = "G", "GG"
+step = 4
+angle = 120
+
+Harter-Heighway Dragon
+gens = 13
+axiom = "XY"
+chr_1, rule_1 = "X", "X+YF+"
+chr_2, rule_2 = "Y", "-FX-Y"
+step = 4
+angle = 90
+WIDTH // 4, -HEIGHT // 4 - 25
+
+
+rule_1 if chr == chr_1 else chr for chr in axiom :
+
+Koch Snowflake
