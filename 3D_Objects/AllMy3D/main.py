@@ -4,8 +4,11 @@ from figure import *
 import pygame as pg
 import numpy as np
 import itertools as itt
+import numba
+import os
 
 pg.init()
+os.chdir("C:\AllArtem\Programer\Python\\3D_Objects\AllMy3D")
 
 '''====================SETTINGS===================='''
 WIDTH, HEIGHT = 1500, 1000                  # Screen size (1500, 1000)
@@ -111,7 +114,7 @@ def main():
     clock = pg.time.Clock()
     tea_cop = vertices_from_obj("objects/Tea_cop.obj")
     # tea_cop_f = faces_from_obj("objects/Tea_cop.obj")
-    human_coords = vertices_from_obj("objects /FinalBaseMesh.obj")
+    human_coords = vertices_from_obj("objects/FinalBaseMesh.obj")
     # tree_coords = vertices_from_obj("objects/Tree.obj")
     # tree_lines = lines_from_obj("objects/Tree.obj")
     cube = Figure(np.array(human_coords))

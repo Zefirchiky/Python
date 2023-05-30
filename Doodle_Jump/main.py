@@ -161,6 +161,8 @@ class Player(object):
             return True
     
     def score_read(self, score):
+        open("data.json", "x")
+
         with open("data.json", "r") as f:
             if self.data_load:
                 self.data = json.load(f)
@@ -171,18 +173,17 @@ class Player(object):
                 
         else:
             self.data[self.player_name] = {"Score": 0,
-                                           "Death": self.data_death}
+                                        "Death": self.data_death}
             
         with open("data.json", "w") as f:
             json.dump(self.data, f, indent=4)
         
         self.data_load = True
         return self.data[self.player_name]["Score"]
-    
+        
     def death_data_add(self):
-        with open("data.json", "r") as f:
-            self.data_load = False
-            self.data[self.player_name]["Death"] += 1
+        self.data_load = False
+        self.data[self.player_name]["Death"] += 1
 
 def main():
     run = True

@@ -189,6 +189,7 @@ def get_clicked_pos(pos, rows, width):
 
 
 def main(win, width):
+	clock = pygame.time.Clock()
 	ROWS = 50
 	grid = make_grid(ROWS, width)
 
@@ -239,6 +240,7 @@ def main(win, width):
 					start = None
 					end = None
 					grid = make_grid(ROWS, width)
+		clock.tick(1000)
 
 	pygame.quit()
 

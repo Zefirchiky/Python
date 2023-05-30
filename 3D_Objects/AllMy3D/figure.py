@@ -1,6 +1,7 @@
 import pygame as pg
 from moves import *
 import itertools as itt
+import numba
 
 '''Colors'''
 WHITE = (255, 255, 255)
@@ -87,6 +88,7 @@ class Figure:
             
         return project_dots, project_coord_dots
 
+    @numba.jit
     def draw(self, surface, line_size: int | float, 
              col: list | tuple, coord_col: list | tuple, 
              X, Y, font, project_dots, 
