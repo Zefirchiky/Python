@@ -1,2 +1,0 @@
-
-    image = ImageEnhance.Sharpness(image)
